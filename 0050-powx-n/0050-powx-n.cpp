@@ -1,6 +1,6 @@
 class Solution {
 public:
-    double rec(double x,int n){
+    double rec(double x,long long n){
         if(n==1)return x;
         if(n==0)return 1;
         double a= rec(x,n/2);
@@ -12,12 +12,9 @@ public:
         if (n == 0)
             return 1;
         if(x==0)return 0;
-        if(n>0)
-            return rec(x,n);
-        if(n==INT_MIN){
-            n+=1;
-            return rec(1/x,abs(n))*x;
-        }
-        return rec(1/x,abs(n));
+        long long m=n;
+        if(m>0)
+            return rec(x,m);
+        return rec(1/x,m);
     }
 };
