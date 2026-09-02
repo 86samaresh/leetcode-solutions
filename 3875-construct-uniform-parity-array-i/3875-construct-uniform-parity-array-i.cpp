@@ -2,6 +2,7 @@ class Solution {
 public:
     bool uniformArray(vector<int>& nums1) {
         return true;
+        // wtf;
         int se=0,so=0;
         for(auto x:nums1){
             int z=0,y=0;
